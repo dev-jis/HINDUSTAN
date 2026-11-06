@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hindustan Engineering | Iron &amp; Steel Fabrication, Rolling Shutters, Steel Doors &amp; Windows</title>
+<meta name="description" content="Hindustan Engineering Iron &amp; Steel Industries – metal fabricator for rolling shutters (manual, mechanical, electrical), hollow metal doors, steel windows, iron and stainless steel fabrication. Bulk orders welcome.">
+<meta name="theme-color" content="#16181c">
+<style>
+/* ========= EDIT COLORS HERE ========= */
+:root{
+  --bg:#14161a; --bg2:#1c1f25; --line:#2c3038;
+  --text:#eef0f3; --muted:#aab0bb;
+  --orange:#f26a1b; --orange-d:#d85a10;
+  --navy:#3b3a7a; --green:#3f9a4a;
+  --max:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{font-family:"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+:focus-visible{outline:3px solid var(--orange);outline-offset:3px}
+.wrap{width:min(100% - 2.5rem,var(--max));margin-inline:auto}
+section{padding:clamp(3.5rem,8vw,6rem) 0}
+h1,h2,h3{font-family:"Arial Narrow","Roboto Condensed",Impact,"Segoe UI",sans-serif;line-height:1.1;letter-spacing:.01em}
+h2{font-size:clamp(1.9rem,4.5vw,3rem);margin-bottom:.8rem;text-transform:uppercase}
+.lead{color:var(--muted);max-width:62ch;margin-bottom:2.2rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:.75rem 1.6rem;font-weight:700;border:2px solid var(--orange);background:var(--orange);color:#fff;cursor:pointer;font-size:1rem;transition:background .2s,transform .2s}
+.btn:hover{background:var(--orange-d);border-color:var(--orange-d)}
+.btn.ghost{background:transparent;border-color:#555b66}
+.btn.ghost:hover{border-color:var(--orange);background:transparent}
+.btns{display:flex;flex-wrap:wrap;gap:.8rem}
+
+/* Top bar + header */
+.topbar{background:#0e0f12;font-size:.85rem;color:var(--muted)}
+.topbar .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.3rem 1.5rem;padding:.45rem 0}
+.topbar a:hover{color:var(--orange)}
+header{position:sticky;top:0;z-index:50;background:rgba(20,22,26,.97);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;min-height:68px;gap:1rem}
+.brand{display:flex;align-items:center;gap:.7rem}
+.brand-mark{width:42px;height:42px;background:var(--orange);display:grid;place-items:center;font-weight:800;color:#111;clip-path:polygon(0 0,100% 0,100% 72%,72% 100%,0 100%)}
+.brand b{display:block;font-size:1.1rem;line-height:1.1}
+.brand small{color:var(--muted);font-size:.78rem}
+.menu{display:flex;align-items:center;gap:1.4rem;font-weight:600;font-size:.95rem}
+.menu a:not(.btn):hover{color:var(--orange)}
+.menu .btn{min-height:42px;padding:.4rem 1.1rem}
+.toggle{display:none;background:none;border:1px solid var(--line);color:var(--text);width:46px;height:46px;font-size:1.5rem;cursor:pointer}
+@media(max-width:980px){
+  .toggle{display:block}
+  .menu{display:none;position:absolute;left:0;right:0;top:100%;flex-direction:column;align-items:stretch;gap:0;background:var(--bg2);border-bottom:1px solid var(--line);padding:.5rem 1.25rem 1.2rem}
+  .menu.open{display:flex}
+  .menu a:not(.btn){padding:.9rem 0;border-bottom:1px solid var(--line)}
+  .menu .btn{margin-top:1rem}
+}
+
+/* Hero */
+.hero{padding:clamp(2.5rem,6vw,5rem) 0}
+.hero .wrap{display:grid;gap:2.5rem;align-items:center}
+@media(min-width:900px){.hero .wrap{grid-template-columns:1.05fr 1fr}}
+.hero h1{font-size:clamp(2.5rem,8vw,5rem);text-transform:uppercase;margin-bottom:1rem}
+.hero h1 span{display:block;color:var(--orange)}
+.hero p{color:var(--muted);max-width:52ch;margin-bottom:1.8rem;font-size:1.05rem}
+.hero-img{border:1px solid var(--line);border-bottom:6px solid var(--orange)}
+.hero-img img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.strip{background:var(--bg2);border-block:1px solid var(--line)}
+.strip ul{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:.5rem 1.5rem;padding:1.1rem 0;font-weight:600}
+.strip li::before{content:"✓ ";color:var(--orange)}
+
+/* About */
+.about .wrap{display:grid;gap:2.5rem}
+@media(min-width:900px){.about .wrap{grid-template-columns:1fr 1.1fr;align-items:center}}
+.about-photo img{width:100%;aspect-ratio:4/3;object-fit:cover;border:1px solid var(--line)}
+.ticks{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:.6rem 1.5rem;margin:1.4rem 0 1.8rem}
+.ticks li::before{content:"✓ ";color:var(--orange);font-weight:700}
+
+/* Products */
+.products{background:var(--bg2)}
+.grid{display:grid;gap:1.4rem;grid-template-columns:repeat(auto-fill,minmax(min(100%,320px),1fr))}
+.card{background:var(--bg);border:1px solid var(--line);display:flex;flex-direction:column;transition:border-color .2s}
+.card:hover{border-color:var(--orange)}
+.card button.thumb{border:0;padding:0;background:#000;cursor:zoom-in;display:block;width:100%}
+.card img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.card div{padding:1.2rem 1.3rem 1.5rem;display:flex;flex-direction:column;gap:.5rem;flex:1}
+.card h3{font-size:1.4rem}
+.card p{color:var(--muted);font-size:.95rem;flex:1}
+.card a.more{color:var(--orange);font-weight:700}
+.card a.more:hover{text-decoration:underline}
+
+/* Services / Industries */
+.cols{display:grid;gap:1.4rem;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.box{border-left:4px solid var(--orange);background:var(--bg2);padding:1.4rem}
+.box h3{font-size:1.3rem;margin-bottom:.5rem}
+.box p,.box li{color:var(--muted);font-size:.95rem}
+.box li::before{content:"– ";color:var(--orange)}
+
+/* Gallery */
+.gallery{background:var(--bg2)}
+.gal{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr))}
+.gal button{border:1px solid var(--line);background:#000;padding:0;cursor:zoom-in;position:relative}
+.gal img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.gal img.contain{object-fit:contain;background:#000}
+.gal span{position:absolute;left:0;bottom:0;right:0;background:rgba(0,0,0,.7);padding:.5rem .8rem;font-size:.9rem;text-align:left;color:#fff}
+
+/* Why */
+.why .cols{grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+
+/* Contact */
+.contact{background:var(--bg2)}
+.contact .wrap{display:grid;gap:2.5rem}
+@media(min-width:900px){.contact .wrap{grid-template-columns:1fr 1.1fr}}
+.info li{padding:.9rem 0;border-bottom:1px solid var(--line);overflow-wrap:anywhere}
+.info b{display:block;color:var(--muted);font-weight:600;font-size:.85rem}
+.info a:hover{color:var(--orange)}
+form{display:grid;gap:1rem}
+label{font-weight:600;font-size:.92rem;display:grid;gap:.35rem}
+input,textarea{font:inherit;color:var(--text);background:var(--bg);border:1px solid #444a55;padding:.8rem;width:100%;min-height:48px}
+textarea{min-height:130px;resize:vertical}
+input:focus,textarea:focus{border-color:var(--orange)}
+.err{color:#ff8a6b;font-size:.85rem;min-height:1.1em;font-weight:400}
+.note{color:var(--muted);font-size:.82rem}
+
+/* Footer */
+footer{background:#0e0f12;padding:3rem 0 1.5rem;border-top:4px solid var(--orange)}
+.foot{display:grid;gap:2rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.foot h3{font-size:1.1rem;margin-bottom:.8rem;text-transform:uppercase}
+.foot li{margin-bottom:.4rem;color:var(--muted)}
+.foot a:hover{color:var(--orange)}
+.foot img{width:150px;margin-bottom:.8rem}
+.copy{margin-top:2rem;padding-top:1.2rem;border-top:1px solid var(--line);color:var(--muted);font-size:.85rem}
+
+/* Floating buttons */
+.wa{position:fixed;right:1rem;bottom:1rem;z-index:40;background:#25a244;color:#fff;font-weight:700;padding:.8rem 1.2rem;border-radius:40px;min-height:48px;display:flex;align-items:center;box-shadow:0 4px 14px rgba(0,0,0,.4)}
+#top{position:fixed;left:1rem;bottom:1rem;z-index:40;width:46px;height:46px;border:1px solid var(--line);background:var(--bg2);color:var(--text);font-size:1.2rem;cursor:pointer;display:none}
+#top.show{display:block}
+
+/* Lightbox */
+.lb{position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:100;display:none;align-items:center;justify-content:center;flex-direction:column;padding:1rem;gap:.8rem}
+.lb.open{display:flex}
+.lb img{max-height:80vh;max-width:100%;width:auto;object-fit:contain}
+.lb p{color:#fff}
+.lb button{position:absolute;top:1rem;right:1rem;width:48px;height:48px;background:var(--orange);border:0;color:#fff;font-size:1.6rem;cursor:pointer}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<!-- ===== TOP BAR (edit contact here) ===== -->
+<div class="topbar"><div class="wrap">
+  <a href="tel:+919977367689">📞 +91 99773 67689</a>
+  <a href="mailto:hindustanengineering8@gmail.com">✉ hindustanengineering8@gmail.com</a>
+  <span>Open: 9:00 AM – 10:00 PM</span>
+</div></div>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#home" aria-label="Hindustan Engineering home">
+      <span class="brand-mark">HE</span>
+      <span><b>Hindustan Engineering</b><small>Iron &amp; Steel Industries</small></span>
+    </a>
+    <button class="toggle" id="toggle" aria-label="Open menu" aria-expanded="false" aria-controls="menu">☰</button>
+    <nav class="menu" id="menu" aria-label="Main">
+      <a href="#home">Home</a><a href="#about">About Us</a><a href="#products">Products</a><a href="#services">Services</a><a href="#gallery">Gallery</a><a href="#why">Why Us</a><a href="#contact">Contact</a>
+      <a class="btn" href="#contact">Request a Quote</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- ===== HERO ===== -->
+<section class="hero" id="home">
+  <div class="wrap">
+    <div>
+      <h1>Engineering strength. <span>Built to last.</span></h1>
+      <p>Iron and steel fabrication for homes, shops and industry: rolling shutters, hollow metal doors, steel windows, gates and custom metalwork. Bulk orders welcome.</p>
+      <div class="btns">
+        <a class="btn" href="#products">Explore Our Products</a>
+        <a class="btn ghost" href="#contact">Contact Us</a>
+      </div>
+    </div>
+    <div class="hero-img">
+      <img src="images/shutter-manual.jpg" width="1448" height="1086" alt="Hindustan Engineering building front with manual rolling shutters">
+    </div>
+  </div>
+</section>
+<div class="strip"><div class="wrap"><ul>
+  <li>Iron fabrication</li><li>Stainless steel work</li><li>Rolling shutters</li><li>Hollow metal doors</li><li>Steel windows</li>
+</ul></div></div>
+
+<!-- ===== ABOUT ===== -->
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="about-photo">
+      <img src="images/office.jpg" width="1448" height="1086" loading="lazy" alt="Hindustan Engineering office with company logo on the wall">
+    </div>
+    <div>
+      <h2>About Hindustan Engineering</h2>
+      <p class="lead" style="margin-bottom:0">Hindustan Engineering Iron &amp; Steel Industries is a metal fabricator dealing in all types of iron and stainless steel. We make customized steel solutions for residential, commercial and industrial requirements, and we also handle bulk requirements.</p>
+      <ul class="ticks">
+        <li>Iron fabrication</li><li>Stainless steel fabrication</li><li>Steel products</li><li>Rolling shutters</li><li>Hollow metal doors</li><li>Steel windows</li><li>Custom fabrication</li><li>Bulk orders</li>
+      </ul>
+      <a class="btn ghost" href="#contact">Talk to Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRODUCTS ===== -->
+<section class="products" id="products">
+  <div class="wrap">
+    <h2>Our Products</h2>
+    <p class="lead">Tap any photo to enlarge. Sizes and finishes are made to your requirement; ask us for a quote.</p>
+    <div class="grid">
+      <article class="card">
+        <button class="thumb" data-lb="images/shutter-manual.jpg" data-cap="Manual rolling shutters"><img src="images/shutter-manual.jpg" width="1448" height="1086" loading="lazy" alt="Manual rolling shutters on a shop front"></button>
+        <div><h3>Manual Rolling Shutters</h3><p>Hand-operated rolling shutters for shops and godowns, made in custom sizes.</p><a class="more" href="#contact" data-product="Manual Rolling Shutters">Enquire now</a></div>
+      </article>
+      <article class="card">
+        <button class="thumb" data-lb="images/shutter-motorised.jpg" data-cap="Mechanical / electrical rolling shutter"><img src="images/shutter-motorised.jpg" width="1448" height="1086" loading="lazy" alt="Motor operated rolling shutter with control box"></button>
+        <div><h3>Mechanical &amp; Electrical Shutters</h3><p>Rolling shutters with mechanical or electrical operation for heavy-use openings.</p><a class="more" href="#contact" data-product="Mechanical / Electrical Rolling Shutters">Enquire now</a></div>
+      </article>
+      <article class="card">
+        <button class="thumb" data-lb="images/door-steel.jpg" data-cap="Hollow metal steel doors"><img src="images/door-steel.jpg" width="1448" height="1086" loading="lazy" alt="Double leaf hollow metal steel doors"></button>
+        <div><h3>Hollow Metal Doors (HMPS)</h3><p>Hollow metal door shutters in steel for offices, factories and homes.</p><a class="more" href="#contact" data-product="Hollow Metal Doors">Enquire now</a></div>
+      </article>
+      <article class="card">
+        <button class="thumb" data-lb="images/windows-steel.jpg" data-cap="Steel windows"><img src="images/windows-steel.jpg" width="1448" height="1086" loading="lazy" alt="Steel framed windows with grill bars"></button>
+        <div><h3>Steel Windows</h3><p>Steel-framed windows with grill options, fabricated to your measurements.</p><a class="more" href="#contact" data-product="Steel Windows">Enquire now</a></div>
+      </article>
+      <article class="card">
+        <button class="thumb" data-lb="images/gate-iron.jpg" data-cap="Iron gate"><img src="images/gate-iron.jpg" width="1448" height="1086" loading="lazy" alt="Black iron double gate with vertical bars"></button>
+        <div><h3>Iron Gates</h3><p>Custom iron gates and fabricated metalwork for homes and industrial premises.</p><a class="more" href="#contact" data-product="Iron Gates">Enquire now</a></div>
+      </article>
+      <article class="card">
+        <button class="thumb" data-lb="images/gate-stainless.jpg" data-cap="Stainless steel gate"><img src="images/gate-stainless.jpg" width="1448" height="1086" loading="lazy" alt="Stainless steel double gate with horizontal bars"></button>
+        <div><h3>Stainless Steel Fabrication</h3><p>SS gates and fabricated products in stainless steel.</p><a class="more" href="#contact" data-product="Stainless Steel Fabrication">Enquire now</a></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section id="services">
+  <div class="wrap">
+    <h2>Services</h2>
+    <p class="lead">From a single door to a bulk order, we fabricate and supply iron and steel products.</p>
+    <div class="cols">
+      <div class="box"><h3>Custom Fabrication</h3><p>Iron and steel items made to the size and design you need.</p></div>
+      <div class="box"><h3>Rolling Shutters</h3><ul><li>Manual</li><li>Mechanical</li><li>Electrical</li></ul></div>
+      <div class="box"><h3>Doors &amp; Windows</h3><p>Hollow metal doors (HMPS) and steel windows.</p></div>
+      <div class="box"><h3>Bulk Supply</h3><p>We deal in bulk requirements of iron and SS steel products.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GALLERY ===== -->
+<section class="gallery" id="gallery">
+  <div class="wrap">
+    <h2>Gallery</h2>
+    <p class="lead">A closer look at our work and workplace.</p>
+    <div class="gal">
+      <button data-lb="images/door-fire-rated.jpg" data-cap="Hollow metal double door with panic bar"><img src="images/door-fire-rated.jpg" width="1448" height="1086" loading="lazy" alt="Grey steel double door with panic bar and door closer"><span>Steel door with panic bar</span></button>
+      <button data-lb="images/office.jpg" data-cap="Hindustan Engineering office"><img src="images/office.jpg" width="1448" height="1086" loading="lazy" alt="Hindustan Engineering office interior"><span>Our office</span></button>
+      <button data-lb="images/company-logo.jpg" data-cap="Hindustan Engineering Iron &amp; Steel Industries"><img class="contain" src="images/company-logo.jpg" width="1280" height="1053" loading="lazy" alt="Hindustan Engineering Iron and Steel Industries logo"><span>Our logo</span></button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHY US ===== -->
+<section class="why" id="why">
+  <div class="wrap">
+    <h2>Why Choose Us</h2>
+    <div class="cols">
+      <div class="box"><h3>Iron &amp; SS under one roof</h3><p>All types of iron and stainless steel work.</p></div>
+      <div class="box"><h3>Made to measure</h3><p>Customized sizes and designs for each requirement.</p></div>
+      <div class="box"><h3>Bulk orders</h3><p>We handle large and repeat requirements.</p></div>
+      <div class="box"><h3>Easy to reach</h3><p>Call or WhatsApp us daily, 9:00 AM – 10:00 PM.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div>
+      <h2>Contact Us</h2>
+      <p class="lead">Tell us what you need and we will get back to you with a quote.</p>
+      <ul class="info">
+        <li><b>Phone</b><a href="tel:+919977367689">+91 99773 67689</a></li>
+        <li><b>WhatsApp</b><a href="https://wa.me/919977367689" target="_blank" rel="noopener">Chat on WhatsApp</a></li>
+        <li><b>Email</b><a href="mailto:hindustanengineering8@gmail.com">hindustanengineering8@gmail.com</a></li>
+        <li><b>Business hours</b>9:00 AM – 10:00 PM</li>
+        <!-- ADD ADDRESS: replace the text below -->
+        <li><b>Address</b>[Add your shop / workshop address here]</li>
+      </ul>
+    </div>
+    <form id="form" novalidate>
+      <label>Your name<input id="f-name" autocomplete="name" required><span class="err" id="e-name"></span></label>
+      <label>Phone number<input id="f-phone" type="tel" autocomplete="tel" required><span class="err" id="e-phone"></span></label>
+      <label>What do you need?<textarea id="f-msg" required placeholder="e.g. Rolling shutter, 10 ft x 8 ft, manual"></textarea><span class="err" id="e-msg"></span></label>
+      <button class="btn" type="submit">Send enquiry by email</button>
+      <p class="note">This opens your email app with the message ready to send. No data is stored on this website.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div><img src="images/company-logo.jpg" width="150" height="123" loading="lazy" alt="Hindustan Engineering logo"><p style="color:var(--muted)">Iron and steel fabrication: rolling shutters, hollow metal doors, steel windows and custom metalwork.</p></div>
+      <div><h3>Quick links</h3><ul><li><a href="#about">About Us</a></li><li><a href="#products">Products</a></li><li><a href="#services">Services</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#contact">Contact</a></li></ul></div>
+      <div><h3>Contact</h3><ul><li><a href="tel:+919977367689">+91 99773 67689</a></li><li><a href="mailto:hindustanengineering8@gmail.com">hindustanengineering8@gmail.com</a></li><li>9:00 AM – 10:00 PM</li></ul></div>
+    </div>
+    <p class="copy">© <span id="year"></span> Hindustan Engineering Iron &amp; Steel Industries. All rights reserved.</p>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/919977367689" target="_blank" rel="noopener">WhatsApp</a>
+<button id="top" aria-label="Back to top">↑</button>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <button id="lb-close" aria-label="Close">×</button>
+  <img id="lb-img" src="" alt=""><p id="lb-cap"></p>
+</div>
+
+<script>
+(function(){
+  var $=function(s){return document.querySelector(s)};
+  /* Mobile menu */
+  var t=$('#toggle'),m=$('#menu');
+  t.addEventListener('click',function(){var o=m.classList.toggle('open');t.setAttribute('aria-expanded',o);t.textContent=o?'✕':'☰'});
+  m.addEventListener('click',function(e){if(e.target.tagName==='A'){m.classList.remove('open');t.setAttribute('aria-expanded',false);t.textContent='☰'}});
+
+  /* Lightbox */
+  var lb=$('#lb'),li=$('#lb-img'),lc=$('#lb-cap'),last=null;
+  function open(src,cap,el){li.src=src;li.alt=cap;lc.textContent=cap;lb.classList.add('open');last=el;$('#lb-close').focus()}
+  function close(){lb.classList.remove('open');li.src='';if(last)last.focus()}
+  document.querySelectorAll('[data-lb]').forEach(function(b){b.addEventListener('click',function(){open(b.dataset.lb,b.dataset.cap,b)})});
+  $('#lb-close').addEventListener('click',close);
+  lb.addEventListener('click',function(e){if(e.target===lb)close()});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&lb.classList.contains('open'))close()});
+
+  /* Product enquiry links prefill the message */
+  document.querySelectorAll('[data-product]').forEach(function(a){a.addEventListener('click',function(){$('#f-msg').value='I would like a quote for: '+a.dataset.product+'.\n'})});
+
+  /* Form validation + mailto (static site: no server sending) */
+  $('#form').addEventListener('submit',function(e){
+    e.preventDefault();
+    var n=$('#f-name').value.trim(),p=$('#f-phone').value.trim(),g=$('#f-msg').value.trim(),ok=true;
+    $('#e-name').textContent=n?'':'Please enter your name.';
+    $('#e-phone').textContent=/^[+\d][\d\s-]{7,}$/.test(p)?'':'Enter a valid phone number.';
+    $('#e-msg').textContent=g?'':'Please describe what you need.';
+    if(!n||!/^[+\d][\d\s-]{7,}$/.test(p)||!g)return;
+    var body='Name: '+n+'\nPhone: '+p+'\n\n'+g;
+    location.href='mailto:hindustanengineering8@gmail.com?subject='+encodeURIComponent('Website enquiry from '+n)+'&body='+encodeURIComponent(body);
+  });
+
+  /* Back to top */
+  var top=$('#top');
+  window.addEventListener('scroll',function(){top.classList.toggle('show',window.scrollY>600)},{passive:true});
+  top.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});
+  $('#year').textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
